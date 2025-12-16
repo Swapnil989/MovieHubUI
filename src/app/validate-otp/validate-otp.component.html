@@ -1,0 +1,33 @@
+<div class="page-wrap">
+    <div class="left-side">
+        <img src="/hub.jpeg" class="bg-image">
+    </div>
+
+    <div class="right-side">
+       
+      
+        <div class="login-container">
+          
+            <div class="containerDiv">
+                <h1 class="loginH1">verify Otp</h1>
+            </div>
+            <div>
+                <img class="otpImage" src="./OTP.avif" alt="Otp Image">
+            </div>
+            <input *ngFor="let otp of otpArray; let i = index" maxlength="1" class="otpBox" type="text"
+                [ngModel]="getOtp(i)" (ngModelChange)="setOtp(i, $event)" (input)="move(i, $event)"
+                (keydown.backspace)="back(i, $event)">
+            <div class="containerDiv">
+                <button (click)="Submit()" type="submit" class="btn btn-primary loginBtn"> verify OTP</button>
+            </div>
+             <div class="signUpDIv">
+                    <label for="">Resend OTP</label>
+                    <label for="">||</label>
+                    <label for="">Login</label>
+                </div>
+                
+        </div>
+
+    </div>
+
+</div>

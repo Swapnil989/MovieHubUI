@@ -1,0 +1,88 @@
+
+.mainDiv{
+    border: 1px solid black;
+    margin: 10px 8%;
+    background-color: beige;
+}
+.header{
+        background-color: #c60e0ef0;
+    height: 55px;
+    color: white;
+    padding: 8px 30px;
+}
+.fromdata{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 50px;
+    position: relative;
+    margin-top: 30px;
+}
+.fromdata1{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 10px;
+    position: relative;
+    margin-top: 30px;
+}
+.fileDIv{
+    display: flex;
+   flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+   left: 13%;
+    gap: 5px;
+    position: relative;
+  
+}
+.aboutDiv{
+   position: absolute;
+    left: 0%;
+    top: 35%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+}
+.textarea{
+    width: 450px;
+    height: 150px;
+    overflow: auto;
+    margin-right: 20px;
+    border: 2px solid #6e6767cf;
+    border-radius: 8px;
+    border-left: 3px solid red;
+}
+.textareaDiv{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.inputdiv{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: flex-start;
+}
+.inputtext{
+    width: 200px;
+    border: 2px solid #6e6767cf;
+    border-radius: 8px;
+    height: 35px;
+    border-left: 3px solid red;
+}
+.hrDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.lable{
+    font-size: 15px;
+    font-weight: 500;
+}

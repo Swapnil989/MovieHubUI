@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+.label{
+    font-size: 18px;
+    font-family: inherit;
+}
+.fistNav{
+    padding-top: 8px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between ;
+    right: 15px;
+}
+.profileImg{
+    width: 33px;
+    height: 33px;
+}
+.citySelect{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 5px;
+
+}
+.SearchBar {
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 35px;
+    width: 25rem;
+    font-size: 15px;
+}
+
+.SerchBTN {
+    width: 90px;
+    height: 35px;
+    margin-top: 23px;
+    border-radius: 9px;
+    background-color: #e6393996; 
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: initial;
+    padding: 0px;
+}
+/* Hide scrollbar for Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for IE, Edge */
+body {
+  -ms-overflow-style: none;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

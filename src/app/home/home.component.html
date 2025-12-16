@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fistNav">
+
+    <form style="display: flex; gap:15px" class="form-inline my-2 my-lg-0">
+
+        <img style="height: 35px;width: 165px;" src="movieHubNavbar.jpeg" alt="">
+        <input class="form-control mr-sm-2 SearchBar" type="search" placeholder="Search For Movies" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0 SerchBTN" type="submit">Search</button>
+    </form>
+    <form style="display: flex;gap:20px">
+        <select class="custom-select citySelect">
+            <option selected>Mumbai</option>
+            <option value="1">Pune</option>
+            <option value="2">Banglore</option>
+            <option value="3">Delhi</option>
+        </select>
+        <img class="profileImg" src="profile.png" alt="profule image">
+        <img class="profileImg" src="log-out.png" alt="profule image">
+
+    </form>
+</nav>
+<nav style="background-color: #6860602e !important;height: 35px;" class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+<div class="MovieContainer">
+
+    <div *ngFor="let movie of movies" (click)="getMovieDetails(movie.movieId)" class="Movie_card" >
+        <img class="Movie_img" [src]="'data:image/jpeg;base64,' + movie.movieImage" alt="">
+        <div class="ratingDiv">
+            <label style="color: red;">Rating : </label>
+            <Span style="color: white;margin-right: 15%;"> 8/10</Span>
+
+            <label style="color: red;">Likes : </label>
+            <Span style="color:white;"> 1000</Span>
+        </div>
+        <div class="MoviesNameDiv">
+            <Span>{{movie.movieName}}</Span>
+            <Span>
+                {{movie.category}}
+            </Span>
+        </div>
+
+    </div>
+
+
+</div>

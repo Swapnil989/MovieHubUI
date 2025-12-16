@@ -1,0 +1,38 @@
+<div class="page-wrap">
+    <div class="left-side">
+        <img src="assets/hub.jpeg" class="bg-image">
+    </div>
+
+    <div class="right-side">
+        <div class="login-container">
+
+            <form action="" [formGroup]="loginform" (ngSubmit)="Submit()">
+                <div class="containerDiv">
+                    <h1 class="loginH1">Login</h1>
+                </div>
+                <div class="containerDiv">
+                    <Label class="label">Email</Label>
+                    <input class="input" type="text" formControlName="email" placeholder=" Enter Email">
+                </div>
+
+                <div class="containerDiv">
+                    <Label class="label">Password</Label>
+                    <input class="input" type="password" formControlName="password" placeholder=" Enter Password">
+                </div>
+                <div class="containerDiv">
+                    <button type="submit" class="btn btn-primary loginBtn"> Login</button>
+                </div>
+                <div class="signUpDIv">
+                    <a for="">Forgat Password</a>
+                    <label for="">||</label>
+                    <a  (click)="SingUp()" for=""> Sing Up</a>
+                </div>
+
+
+            </form>
+        </div>
+        
+        
+    </div>
+
+</div>

@@ -9,9 +9,7 @@
     ]
   },
   "files": [
-    "src/main.ts",
-    "src/main.server.ts",
-    "src/server.ts"
+    "src/main.ts"     // Only SPA entry point
   ],
   "include": [
     "src/**/*.d.ts"

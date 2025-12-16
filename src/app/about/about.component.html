@@ -1,0 +1,162 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fistNav">
+
+    <form style="display: flex; gap:15px" class="form-inline my-2 my-lg-0">
+
+        <img style="height: 35px;width: 165px;" src="movieHubNavbar.jpeg" alt="">
+        <input class="form-control mr-sm-2 SearchBar" type="search" placeholder="Search For Movies" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0 SerchBTN" type="submit">Search</button>
+    </form>
+    <form style="display: flex;gap:20px">
+        <select class="custom-select citySelect">
+            <option selected>Mumbai</option>
+            <option value="1">Pune</option>
+            <option value="2">Banglore</option>
+            <option value="3">Delhi</option>
+        </select>
+        <img class="profileImg" src="profile.png" alt="profule image">
+        <img class="profileImg" src="log-out.png" alt="profule image">
+
+    </form>
+</nav>
+<nav style="background-color: #6860602e !important;height: 35px;" class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+<div class="backImage">
+    <img class="img1" src="aboutBackground2.jpg" alt="">
+
+    <div class="MovieInfo">
+        <div>
+            <img class="aboutimage"  [src]="'data:image/jpeg;base64,' + moviesDetails.movieImage" alt="">
+        </div>
+        <div class="trailer">
+            <a class="trailerLink" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                <i style="font-size: 11px; padding-right: 7px;" class="fa-solid fa-play"></i> Trailers </a>
+        </div>
+        <div class="moviename">
+            <h2> {{moviesDetails.movieName}}</h2>
+            <div class="RateDiv">
+                <div>
+                    <i style="font-size: 15px; color: #ed3b3b;" class="fa-solid fa-star"></i>
+                    <span style="font-size: 16px; color: white;"> 9.8/10(1000k Votes)</span>
+                </div>
+                <div class="rateBtn">
+                    <span>Rate Now</span>
+                </div>
+
+            </div>
+            <div style="margin-top: 2px;">
+                <span class="detailspan">{{moviesDetails.duration}}. {{moviesDetails.category}} {{moviesDetails.certificateName}}+. {{moviesDetails.releaseDate}}</span>
+            </div>
+            <div style="margin-top: 4px;">
+                <span class="detailspan">2D</span>
+                <span class="detailspan"> Hindi</span>
+            </div>
+            <div class="BookTicketdiv">
+                <span style="color: white;" class="detailspan">Book Ticket</span>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+<div class="Aboutdiv">
+
+    <div>
+        <h4>About the Movie</h4>
+    </div>
+    <div>
+        <Span style="white-space:pre-line;"> {{moviesDetails.about}}</Span>
+    </div>
+</div>
+<div class="Aboutdiv">
+    <h5>Cast</h5>
+</div>
+<div class="castConatiner">
+    <div *ngFor="let cast of cast" class="castList">
+        <div>
+            <img class="castImg"   [src]="'data:image/jpeg;base64,' + cast.actorImage" alt="">
+        </div>
+        <div>
+            <Span style="font-size: 14px; font-weight: 600;">{{cast.actorName}}</Span>
+        </div>
+        <div>
+            <Span style="font-size: 12px;">{{cast.actorRole}}</Span>
+        </div>
+
+    </div>
+    <div class="castList">
+        <div>
+
+            <img class="castImg" src="Hritic_roshan.jpeg" alt="">
+        </div>
+        <div>
+            <Span style="font-size: 14px; font-weight: 600;">Hritick Roshan</Span>
+        </div>
+        <div>
+            <Span style="font-size: 12px;">Rocky</Span>
+        </div>
+    </div>
+    <div class="castList">
+        <div>
+
+            <img class="castImg" src="Hritic_roshan.jpeg" alt="">
+        </div>
+        <div>
+            <Span style="font-size: 14px; font-weight: 600;">Hritick Roshan</Span>
+        </div>
+        <div>
+            <Span style="font-size: 12px;">Rocky</Span>
+        </div>
+    </div>
+    <div class="castList">
+        <div>
+
+            <img class="castImg" src="Ntr.jpeg" alt="">
+        </div>
+        <div>
+            <Span style="font-size: 14px; font-weight: 600;">Hritick Roshan</Span>
+        </div>
+        <div>
+            <Span style="font-size: 12px;">Rocky</Span>
+        </div>
+    </div>
+    <div class="castList">
+        <div>
+            <img class="castImg" src="Ntr.jpeg" alt="">
+        </div>
+        <div>
+            <Span style="font-size: 14px; font-weight: 600;">Hritick Roshan</Span>
+        </div>
+        <div>
+            <Span style="font-size: 12px;">Rocky</Span>
+        </div>
+    </div>
+</div>

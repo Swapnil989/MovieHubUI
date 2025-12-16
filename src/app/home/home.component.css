@@ -1,0 +1,44 @@
+
+
+.MovieContainer {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: auto;
+    padding: 20px 0px;
+    justify-content: center;
+    /* Limit width so grid stays centered */
+    width: fit-content;
+    margin: 0 auto;
+
+}
+
+.Movie_card {
+    width: 220px;
+    height: 425px;
+    border-radius: 9px;
+    overflow: hidden;  
+}
+.Movie_img {
+    height: 75%;
+    width: 100%;
+}
+.ratingDiv{
+       background-color: #000000eb;
+    padding: 5px 0px 6px 10px;
+    border-radius: 0px 0px 9px 9px;
+    box-shadow: 0 4px 10px rgba(0, 1, 1, 0.4);
+    margin-bottom: 4px;
+
+
+}
+
+.MoviesNameDiv{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}

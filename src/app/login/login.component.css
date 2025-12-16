@@ -1,0 +1,103 @@
+.login-container{
+    width: 400px;
+    height: 450px;
+    padding: 20px;
+    border: 2px solid #c21919;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    background: white;
+
+}
+    
+.page-wrap {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+.left-side {
+    flex: 1;                  /* 50% width */
+    height: 100vh;
+    overflow: hidden;
+}
+.bg-image {
+    width: 100%;          /* Left side image */
+    height: 100%;
+    object-fit: cover;   /* Image adjusts perfectly */
+}
+
+.right-side {
+    flex: 1;                  /* 50% width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+.containerDiv{
+  
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.input{
+    height: 42px;
+    width: 290px;
+    border-radius: 8px;
+    padding-left:10px;
+    border: 2px solid #12101099;
+    box-shadow: 0 3px 2px rgba(0, 1, 1, 0.2);
+    border-left: 3px solid #ed1c1c;
+}
+.loginH1{
+    margin-top: 20px;
+    font-family: initial;
+    font-variant: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.loginBtn{
+    width: 140px;
+    height: 44px;
+    margin-top: 23px;
+    border-radius: 9px;
+    background-color: #dd2929;
+    color: black;
+    font-size: 21px;
+    font-weight: 500;
+    font-family: initial;
+}
+.signUpDIv{
+    /* padding: 10px; */
+    color: blue;
+    /* margin-left: 44px; */
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.otpBox {
+  width: 50px;
+  height: 45px;
+  border-radius: 8px;
+  font-size: 22px;
+  text-align: center;
+  border: 2px solid #7BA7FF;
+  outline: none;
+  margin-left:8px;
+  margin-top:10px;
+  
+}
+
+.otpImage{
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin:0 auto;
+
+
+}

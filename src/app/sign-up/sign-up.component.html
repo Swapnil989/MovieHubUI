@@ -1,0 +1,42 @@
+<div class="page-wrap">
+    <div class="left-side">
+        <img src="/hub.jpeg" class="bg-image">
+    </div>
+
+    <div class="right-side">
+        <div class="SignUp-container">
+            <form action="" [formGroup]="SingUp" (ngSubmit)="Submit()">
+                   <div class="containerDiv">
+                    <h1 class="loginH1">Sign Up</h1>
+                </div>
+                <div class="containerDiv">
+                    <Label class="label">Email:</Label>
+                    <input class="input" type="text" formControlName="email" placeholder=" Enter Email">
+                </div>
+                 <div class="containerDiv">
+                    <Label class="label">User Name:</Label>
+                    <input class="input" type="text" formControlName="userName" placeholder=" Enter User Name">
+                </div>
+                 <div class="containerDiv">
+                    <Label class="label">Password:</Label>
+                    <input class="input" type="text" formControlName="password" placeholder=" Enter password">
+                </div>
+                 <div class="containerDiv">
+                    <Label class="label">Mobile No:</Label>
+                    <input class="input" type="text" formControlName="mobile" placeholder=" Enter Mobile No">
+                </div>
+                  <div class="gender">
+                    <Label class="label">Gender  :</Label>
+                    <select class="selects" selected="" formControlName="gender">
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                </div>
+                 <div class="containerDiv create">
+                    <button type="submit" class="btn btn-primary loginBtn"> Create User</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

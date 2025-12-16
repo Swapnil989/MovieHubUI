@@ -1,0 +1,166 @@
+<div class="mainDiv">
+    <div class="header">
+        <h3>Add Movie Details</h3>
+    </div>
+    <div class="hrDiv">
+        <hr style="width: 5%; margin-left: -2px;">
+        <span>Movie Details</span>
+        <hr style="width: 85%;">
+    </div>
+    <form [formGroup]="addfrom" action="" (ngSubmit)="Submit()">
+        <div class="fromdata">
+            <div class="inputdiv">
+                <label class="lable" for="">Movie Name</label>
+                <input formControlName="movieName" class="inputtext" type="text">
+                <span class="error"
+                    *ngIf="addfrom.get('movieName')?.touched && addfrom.get('movieName')?.hasError('required')">
+                    Movie Name is required
+                </span>
+            </div>
+            <div class="inputdiv">
+                <label class="lable" for="">Catagory</label>
+                <input formControlName="category" class="inputtext" type="text">
+                <span class="error"
+                    *ngIf="addfrom.get('category')?.touched && addfrom.get('category')?.hasError('required')">
+                    Category is required
+                </span>
+            </div>
+            <div class="inputdiv">
+                <label class="lable" for="">Certificate</label>
+                <select formControlName="certificateName" class="inputtext" name="" id="">
+                    <option>UA1</option>
+                </select>
+                <span class="error"
+                    *ngIf="addfrom.get('certificateName')?.touched && addfrom.get('certificateName')?.hasError('required')">
+                    Certificate Name is reuired.
+                </span>
+            </div>
+            <div class="inputdiv">
+                <label class="lable" for="">Format</label>
+                <select formControlName="format" class="inputtext" name="" id="">
+                    <option>2D</option>
+                    <option>3D</option>
+                </select>
+                <span class="error"
+                    *ngIf="addfrom.get('format')?.touched && addfrom.get('format')?.hasError('required')">
+                    Format is required
+                </span>
+            </div>
+        </div>
+        <div class="fromdata">
+            <div class="inputdiv">
+                <label class="lable">Release Date</label>
+                <input formControlName="releaseDate" class="inputtext" type="date">
+                <span class="error"
+                    *ngIf="addfrom.get('releaseDate')?.touched && addfrom.get('releaseDate')?.hasError('required')">
+                    Release Date is required
+                </span>
+            </div>
+            <div class="inputdiv">
+                <label class="lable">Duration</label>
+                <input formControlName="duration" class="inputtext" type="Time">
+                <span class="error"
+                    *ngIf="addfrom.get('duration')?.touched && addfrom.get('duration')?.hasError('required')">
+                    Duration is required
+                </span>
+            </div>
+            <div class="inputdiv">
+                <label class="lable">Trailers</label>
+                <input formControlName="trailers" class="inputtext" type="text">
+                <span class="error"
+                    *ngIf="addfrom.get('trailers')?.touched && addfrom.get('trailers')?.hasError('required')">
+                    Trailers is required
+                </span>
+            </div>
+            <div>
+                <div style="border:2px solid black; height: 300px;width: 200px;">
+                    <img *ngIf="preview" [src]="preview" style="height:100%; width:100%; object-fit:cover;">
+                </div>
+                <div><label class="lable" for="">Image Preview</label></div>
+
+            </div>
+            <div class="aboutDiv">
+                <div class="inputdiv">
+                    <label class="lable" for="">About</label>
+                    <textarea formControlName="about" class="textarea" name="" id=""></textarea>
+                    <span class="error"
+                        *ngIf="addfrom.get('about')?.touched && addfrom.get('about')?.hasError('required')">
+                        About is required
+                    </span>
+                </div>
+                <div class="inputdiv">
+                    <mat-form-field class="full-width">
+                        <mat-label>Select Languages</mat-label>
+                        <mat-select formControlName="LangList" multiple>
+                            <mat-option *ngFor="let lang of languageList" [value]="lang">
+                                {{ lang }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error
+                        *ngIf="addfrom.get('LangList')?.touched && addfrom.get('LangList')?.hasError('required')">
+                        * Please select at least one language
+                    </mat-error>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="fileDIv">
+            <label class="lable" for="">Movie cover photo</label>
+            <input type="file" name="" id="" (change)="onFileSelect($event)" formControlName="movieImage">
+        </div>
+        <div class="hrDiv">
+            <hr style="width: 5%;">
+            <span>Cast</span>
+            <hr style="width: 100%;">
+        </div>
+
+        @for (castGroup of castArray.controls; track $index) {
+
+        <div style="margin-top: 0px; margin-bottom: 20px;" class="fromdata" [formGroup]="castGroup">
+
+            <div class="inputdiv">
+                <label class="lable" for="">Actor Name</label>
+                <input formControlName="actorName" class="inputtext" type="text">
+                <span class="error"
+                    *ngIf="addfrom.get('actorName')?.touched && addfrom.get('actorName')?.hasError('required')">
+                    Actor Name is required
+                </span>
+            </div>
+            <div class="inputdiv">
+                <label class="lable" for="">Movie Role Name</label>
+                <input formControlName="actorRole" class="inputtext" type="text">
+                <span class="error"
+                    *ngIf="addfrom.get('actorRole')?.touched && addfrom.get('actorRole')?.hasError('required')">
+                    Actor Role is required
+                </span>
+            </div>
+            <div class="inputdiv">
+                <label class="lable" for="">Actor Image</label>
+                <input (change)="CastImage($event,$index)" type="file" name="" id="">
+                <span class="error" *ngIf=" addfrom.get('file')?.touched && addfrom.get('file')?.hasError('required')">
+                    Actor Image Is required.
+                </span>
+            </div>
+            <div class="inputdiv">
+                <button (click)="removeRow($index)" style="margin-top: 25px;">Remove</button>
+            </div>
+
+
+        </div>
+        }
+
+        <div class="fromdata1">
+            <i class="fa-solid fa-plus fa-lg" style="margin-top: 10px;"></i>
+            <label (click)="addMore()" style="cursor: pointer;">Add More</label>
+        </div>
+
+
+
+        <div>
+            <button type="submit">submit</button>
+        </div>
+
+    </form>
+</div>
